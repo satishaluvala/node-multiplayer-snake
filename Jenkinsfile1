@@ -1,0 +1,28 @@
+node ('master') {
+    //def app
+    stage('Git Clone')
+    {
+        checkout scm
+    }
+ 
+    stage('Build and Tag')
+    {
+       sh 'echo Build-and-Tag'
+       //app = docker.build("amrit96/snake")
+    }
+ 
+    stage('Push-Dockerhub')
+    {      
+        sh 'echo Post-to-dockerhub'
+        /*docker.withRegistry('https://registry.hub.docker.com','dockerhub') {
+              app.push("latest")
+              }*/
+    }
+ 
+    stage('Pull docker image')
+    {
+       sh 'echo Pull-image-server'
+       /* sh "docker-compose down"
+        sh "docker-compose up -d" */
+    }
+}
