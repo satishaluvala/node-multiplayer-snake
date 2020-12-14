@@ -1,10 +1,10 @@
 version: '2'
 services:
   snake:
-    image: 'amrit96/snake'
-    environment:
-      - "PORT:3000"
-    ports:
-      - "80:3000"
-    volumes:
-      - ./:/app
+        image: 'satish45/snake'
+        environment:
+          -  "PORT:3000"
+        ports:
+          -  "80:3000"
+        volumes:
+          -  ./:/app
