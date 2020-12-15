@@ -7,7 +7,7 @@ node ('Ubuntu-app-agent') {
  
     stage('Build and Tag')
     {
-        app = docker.build("apptest/snake")
+        app = docker.build("satishaluvala/devsecopstraining")
     }
  
     stage('Push-Dockerhub')
