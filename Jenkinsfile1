@@ -12,7 +12,7 @@ node ('Ubuntu-app-agent') {
  
     stage('Push-Dockerhub')
     {      
-        docker.withRegistry('https://registry.hub.docker.com','satishaluvala') {
+        docker.withRegistry('https://registry.hub.docker.com','DockerHub') {
               app.push("latest")
               }
     }
